@@ -1,0 +1,17 @@
+<div>
+  <div class="spinner-border text-primary" role="status" *ngIf="isLoading">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="card" *ngIf="!isLoading">
+    <div class="card-header" (click)="clearFiltr()">
+      {{title}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+        *ngFor="let item of types; let type = index" (click)="filtr(type)">
+        {{item}}
+
+      </li>
+    </ul>
+  </div>
+</div>

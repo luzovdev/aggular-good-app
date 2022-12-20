@@ -1,0 +1,25 @@
+<div class="card mb-3" style="max-width: 540px" [ngStyle]="{cursor: 'pointer'}">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <figure>
+        <img [src]="product.img" alt="" [ngStyle]="{width: '100%'}"/>
+      </figure>
+      
+    </div>
+ 
+  <div class="col-md-8">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">Категория - {{ product.category }}</p>
+      <p class="card-text">Описание: {{ product.description}}</p>
+      <p class="card-text">Цена - {{ product.price }}</p>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button class="btn btn-warning mx-2">Изменить информацию</button>
+    <button class="btn btn-danger mx-2" (click)="deleteProduct()">Удалить товар</button>
+  </div>
+  
+</div>
+

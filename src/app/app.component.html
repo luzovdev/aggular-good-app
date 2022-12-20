@@ -1,0 +1,32 @@
+  <div class="container">
+    <h1 class="text-center text-primary">{{ title }}</h1>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="add">Добавить товар</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about">О нас</a>
+          </li>
+        </ul>
+      </div>
+      <form role="search" class="mx-2">
+        <input class="form-control" type="search" placeholder="Search" />
+      </form>
+    </nav>
+    <main>
+      <div class="row">
+        <div class="col-4">
+          <app-types></app-types>
+        </div>
+        <div class="col-8">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </main>
+    <app-footer></app-footer>
+  </div>

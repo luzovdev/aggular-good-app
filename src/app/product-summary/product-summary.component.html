@@ -1,0 +1,17 @@
+<div class="card mb-3" style="max-width: 540px" [ngStyle]="{cursor: 'pointer'}"  (click)="goToDetail()">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <figure>
+        <img [src]="product.img" alt="" [ngStyle]="{width: '100%'}"/>
+      </figure>
+      
+    </div>
+ 
+  <div class="col-md-8">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">Price - {{ product.price }}</p>
+    </div>
+  </div>
+</div>
+
